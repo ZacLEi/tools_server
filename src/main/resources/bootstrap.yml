@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: sword-art-online
+#  cloud:
+#    sentinel:
+#      transport:
+#        port: 8719
+#        dashboard: localhost:8080
+#    nacos:
+#      config:
+#        server-addr: 8.136.191.241:8848
+#feign:
+#  sentinel:
+#    enabled: true

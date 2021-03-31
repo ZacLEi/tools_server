@@ -1,0 +1,27 @@
+server:
+  port: 8079
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://rm-bp1k4v90n71m7j33qto.mysql.rds.aliyuncs.com:3306/sao?useUnicode=true&characterEncoding=utf-8
+    username: liulei
+    password: 240xx0qb095!LL
+    hikari:
+      connection-test-query: SELECT 1
+      minimum-idle: 15
+      pool-name: MyHikariPool
+      max-lifetime: 1800000
+      connection-timeout: 20000
+      idle-timeout: 180000
+      auto-commit: true
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: not_empty
+      db-type: mysql
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
